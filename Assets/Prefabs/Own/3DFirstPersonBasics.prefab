@@ -156,7 +156,7 @@ Transform:
   m_GameObject: {fileID: 58407823228677607}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 457, y: 29.91, z: 135}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_Children:
   - {fileID: 3017564335361723307}
   - {fileID: 5295467615629189252}
@@ -1684,6 +1684,7 @@ GameObject:
   - component: {fileID: 3017564335361723309}
   - component: {fileID: 2900090313328539571}
   - component: {fileID: 6131777044914533447}
+  - component: {fileID: 7503755059809272586}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -1699,7 +1700,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3017564335361723310}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.9762897, z: 0.26280212}
+  m_LocalPosition: {x: 0, y: 1.9762897, z: 0.2628051}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 58407823228677606}
@@ -1736,7 +1737,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 823
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1745,7 +1746,7 @@ Camera:
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
+  m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 --- !u!81 &3017564335361723309
@@ -1823,6 +1824,15 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!45 &7503755059809272586
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3017564335361723310}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 2039a0ad0a9d05549928b70362f54902, type: 2}
 --- !u!1 &3104377426294966604
 GameObject:
   m_ObjectHideFlags: 0
@@ -3138,7 +3148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5295467615629189499}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.9762897, z: 0.26280212}
+  m_LocalPosition: {x: 0, y: 1.9762897, z: 0.2628051}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5295467615015211328}
@@ -4037,7 +4047,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6345201765200599749}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: MirrorSupport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4070,7 +4080,7 @@ GameObject:
   - component: {fileID: 6345201765514660562}
   - component: {fileID: 6345201765514660588}
   - component: {fileID: 6345201765514660563}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Group1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4151,7 +4161,7 @@ GameObject:
   - component: {fileID: 6345201765843763457}
   - component: {fileID: 6345201765843763459}
   - component: {fileID: 6345201765843763458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MirrorMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4233,7 +4243,8 @@ GameObject:
   - component: {fileID: 6345201766105509625}
   - component: {fileID: 6345201766105509624}
   - component: {fileID: 6178973919391580423}
-  m_Layer: 0
+  - component: {fileID: 509345092}
+  m_Layer: 8
   m_Name: MirrorCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4247,8 +4258,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6345201766105509630}
-  m_LocalRotation: {x: -0.004208888, y: 0.99053854, z: 0.031211376, w: -0.13357262}
-  m_LocalPosition: {x: -3.0578268, y: 1.3736514, z: 17.905262}
+  m_LocalRotation: {x: -0.0020559593, y: 0.9976556, z: 0.058870014, w: -0.03483549}
+  m_LocalPosition: {x: -6.4402547, y: 0.22701234, z: 16.922045}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6345201766380304262}
@@ -4270,22 +4281,22 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
+  m_FocalLength: 20.78461
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
+    x: -0.6
+    y: 0.21
     width: 1
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 77
+  field of view: 60.000004
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 535
+    m_Bits: 663
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -4294,7 +4305,7 @@ Camera:
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
+  m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 --- !u!114 &6345201766105509624
@@ -4342,6 +4353,15 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!45 &509345092
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6345201766105509630}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 2039a0ad0a9d05549928b70362f54902, type: 2}
 --- !u!1 &6345201766380304261
 GameObject:
   m_ObjectHideFlags: 0
@@ -4351,7 +4371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6345201766380304262}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MirrorEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4365,7 +4385,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6345201766380304261}
-  m_LocalRotation: {x: 0.031215407, y: 0.13357395, z: -0.004209394, w: 0.9905382}
+  m_LocalRotation: {x: 0.058871605, y: 0.034838893, z: -0.0020558415, w: 0.99765533}
   m_LocalPosition: {x: 0.47000974, y: -0.13199985, z: 0.9950031}
   m_LocalScale: {x: 0.062025994, y: 0.046224006, z: 0.057297993}
   m_Children:
@@ -4374,7 +4394,7 @@ Transform:
   - {fileID: 6345201765200599749}
   m_Father: {fileID: 2772574569612479472}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 3.61, y: 15.36, z: 0}
+  m_LocalEulerAnglesHint: {x: 6.754, y: 4, z: 0}
 --- !u!1 &6345201766502174273
 GameObject:
   m_ObjectHideFlags: 0
@@ -4387,7 +4407,7 @@ GameObject:
   - component: {fileID: 6345201766502174301}
   - component: {fileID: 6345201766502174300}
   - component: {fileID: 6345201766502174275}
-  m_Layer: 30
+  m_Layer: 8
   m_Name: MirrorBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4479,7 +4499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6345201766506269759}
   - component: {fileID: 6345201766506269752}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MirrorFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4493,7 +4513,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6345201766506269758}
-  m_LocalRotation: {x: -0.000001942739, y: -0.00000025331974, z: 0.000000015832484,
+  m_LocalRotation: {x: -0.0000008009374, y: -0.000001590699, z: 0.00000018835999,
     w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.56}
   m_LocalScale: {x: 1, y: 1, z: 1}

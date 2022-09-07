@@ -25,6 +25,7 @@ public class THC6_ctrl : MonoBehaviour {
 		r_sp = runSpeed; //read run speed
 		battle_state = 0;
 		runSpeed = 1;
+		anim.SetInteger("battle", 1);
 
 	}
 	
