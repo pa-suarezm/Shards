@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
 #endif
@@ -78,6 +79,9 @@ namespace StarterAssets
 
 		private const float _threshold = 0.01f;
 
+		// Interact callback
+		public static Action OnInteract;
+
 		private bool IsCurrentDeviceMouse
 		{
 			get
@@ -119,6 +123,7 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+			Interact();
 		}
 
 		private void LateUpdate()
@@ -249,6 +254,15 @@ namespace StarterAssets
 			if (_verticalVelocity < _terminalVelocity)
 			{
 				_verticalVelocity += Gravity * Time.deltaTime;
+			}
+		}
+
+		private void Interact()
+		{
+			if (_input.interact)
+			{
+				OnInteract?.Invoke();
+				_input.interact = false;
 			}
 		}
 
