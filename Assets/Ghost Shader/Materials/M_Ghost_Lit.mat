@@ -12,23 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 4
+  version: 7
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_Ghost_Lit
-  m_Shader: {fileID: -6465566751694194690, guid: ebdb64cca92bef044855c085663f6964, type: 3}
-  m_ShaderKeywords: 
+  m_Shader: {fileID: -6465566751694194690, guid: ebdb64cca92bef044855c085663f6964,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -108,9 +113,13 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - Boolean_d6a35c6e698547148aaae3aedac27bde: 1
+    - GHOST_FALLOFF_TIME: 0
+    - GHOST_NOISE: 0
     - Vector1_2765f3234f134173bb662e3352e5b05d: 1
+    - Vector1_283f9ebbab87471cad81e071d411304f: 0.1
     - Vector1_3064bd55a9174bb3a324450c5dbad75a: 1.5
     - Vector1_c0fe64c24a1f42749d95863d7b3afd32: 1
     - _AlphaClip: 0
@@ -130,6 +139,7 @@ Material:
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
+    - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
@@ -144,6 +154,7 @@ Material:
     - Color_a293635786174851915c48f95460e9e7: {r: 0, g: 0, b: 0, a: 0}
     - Color_e649d97becec41be883dd5b6d677c0cc: {r: 0, g: 0, b: 0, a: 0}
     - Color_f3edd8bee3f9499c8ea7b8627e5d7164: {r: 1, g: 0, b: 0, a: 0}
+    - Color_f41ea9d6cc7943488a4bce7ca13f02e9: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

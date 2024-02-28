@@ -7,7 +7,7 @@ public class Key : MonoBehaviour, InteractableEntity
 	{
 		if (other.gameObject.CompareTag("Player"))
 		{
-			Debug.Log("Press 'E' to pickup key"); // TODO Change debug to on-screen tooltip system
+			UIManager.Instance.SetTooltipText("Press 'E' to pickup key");
 			FirstPersonController.OnInteract = OnInteract;
 		}
 	}
@@ -16,7 +16,7 @@ public class Key : MonoBehaviour, InteractableEntity
 	{
 		if (other.gameObject.CompareTag("Player"))
 		{
-			Debug.Log(""); // TODO Change debug to on-screen tooltip system
+			UIManager.Instance.SetTooltipText("");
 			FirstPersonController.OnInteract = null;
 		}
 	}
@@ -29,7 +29,7 @@ public class Key : MonoBehaviour, InteractableEntity
 
 	private void OnDisable()
 	{
-		Debug.Log(""); // TODO Change debug to on-screen tooltip system
+		UIManager.Instance.SetTooltipText("");
 		FirstPersonController.OnInteract = null;
 	}
 }

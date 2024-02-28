@@ -12,27 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 4
+  version: 7
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_Ghost_Unlit
-  m_Shader: {fileID: -6465566751694194690, guid: 8d92fd98f72dcd349b1bcdb955b55f85, type: 3}
-  m_ShaderKeywords: 
+  m_Shader: {fileID: -6465566751694194690, guid: 8d92fd98f72dcd349b1bcdb955b55f85,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_546492ceffac46ad853d427a2d8e937b:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_705fbe96631c471c9c0f9c4dcbf99b88:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -92,9 +101,13 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - Boolean_ef727e5c610641bbbcda8d3481a0590f: 1
+    - GHOST_FALLOFF_TIME: 0
+    - GHOST_NOISE: 0
     - Vector1_41a87df37a22443aab5d022f9718407a: 1
+    - Vector1_8b4c9aff004b4f3bb8d7fde1a788f18f: 0.1
     - Vector1_c0fe64c24a1f42749d95863d7b3afd32: 1.5
     - _AlphaClip: 0
     - _Blend: 0
@@ -113,6 +126,7 @@ Material:
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
+    - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
@@ -123,6 +137,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_189c87cfc000415fa275c99c01aae40d: {r: 1, g: 1, b: 1, a: 0}
     - Color_a293635786174851915c48f95460e9e7: {r: 0, g: 0, b: 0, a: 0}
     - Color_f3edd8bee3f9499c8ea7b8627e5d7164: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}

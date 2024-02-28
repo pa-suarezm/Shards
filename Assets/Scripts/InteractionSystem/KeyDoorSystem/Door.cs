@@ -20,19 +20,19 @@ public class Door : MonoBehaviour, InteractableEntity
 			if (isUnlocked)
 			{
 				var msg = isOpen ? "Press 'E' to close door" : "Press 'E' to open door";
-				Debug.Log(msg); // TODO Change debug to on-screen tooltip system
+				UIManager.Instance.SetTooltipText(msg);
 				FirstPersonController.OnInteract = OnInteract;
 			}
 			else
 			{
 				if (InventoryManager.Instance.HasSmallKey())
 				{
-					Debug.Log("Press 'E' to open door"); // TODO Change debug to on-screen tooltip system
+					UIManager.Instance.SetTooltipText("Press 'E' to open door");
 					FirstPersonController.OnInteract = OnInteract;
 				}
 				else
 				{
-					Debug.Log("You need a key open this door"); // TODO Change debug to on-screen tooltip system
+					UIManager.Instance.SetTooltipText("You need a key open this door");
 				}
 			}
 		}
@@ -42,7 +42,7 @@ public class Door : MonoBehaviour, InteractableEntity
 	{
 		if (other.gameObject.CompareTag("Player"))
 		{
-			Debug.Log(""); // TODO Change debug to on-screen tooltip system
+			UIManager.Instance.SetTooltipText("");
 			FirstPersonController.OnInteract = null;
 		}
 	}
@@ -77,7 +77,7 @@ public class Door : MonoBehaviour, InteractableEntity
 		transform.DORotate(currentRotation, openingDuration);
 
 		var msg = isOpen ? "Press 'E' to close door" : "Press 'E' to open door";
-		Debug.Log(msg); // TODO Change debug to on-screen tooltip system
+		UIManager.Instance.SetTooltipText(msg);
 		FirstPersonController.OnInteract = ToggleDoorState;
 	}
 }
