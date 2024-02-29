@@ -29,7 +29,10 @@ public class Key : MonoBehaviour, InteractableEntity
 
 	private void OnDisable()
 	{
-		UIManager.Instance.SetTooltipText("");
+		if (UIManager.Instance != null)
+		{
+			UIManager.Instance.SetTooltipText("");
+		}
 		FirstPersonController.OnInteract = null;
 	}
 }

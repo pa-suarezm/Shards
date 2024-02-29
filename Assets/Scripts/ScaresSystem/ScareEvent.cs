@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class ScareEvent : MonoBehaviour
 {
-	public Transform startingPoint;
-
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.CompareTag("Player"))
@@ -15,7 +13,7 @@ public class ScareEvent : MonoBehaviour
 		}
 	}
 
-	protected virtual void ScareStart()
+	public virtual void ScareStart()
 	{
 		if (!ScaresManager.Instance.CanScareStart(this))
 			return;
