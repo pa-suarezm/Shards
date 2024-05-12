@@ -20,4 +20,9 @@ public class ScareEvent : MonoBehaviour
 
 		ScaresManager.Instance.SetScareEventAsUsed(this);
 	}
+
+	public virtual void OnScareEnd()
+	{
+		gameObject.SetActive(false);
+	}
 }

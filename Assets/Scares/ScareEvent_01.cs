@@ -9,5 +9,7 @@ public class ScareEvent_01 : ScareEvent
 		base.ScareStart();
 
 		ThunderManager.Instance.PlayThunder();
+
+		OnScareEnd();
 	}
 }

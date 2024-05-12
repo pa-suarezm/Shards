@@ -9,7 +9,7 @@ public class ThunderManager : SingletonBehavior<ThunderManager>
     private AudioSource _thunderAudioSource;
 
     [SerializeField]
-    private AudioClip _thunderAudioClip;
+    private List<AudioClip> _thunderAudioClips;
 
     [Space(20)]
 
@@ -18,6 +18,7 @@ public class ThunderManager : SingletonBehavior<ThunderManager>
     private Light _thunderLight;
 
     private bool playingThunder = false;
+    private AudioClip clipToPlay;
 
     public void PlayThunder()
     {
@@ -27,22 +28,29 @@ public class ThunderManager : SingletonBehavior<ThunderManager>
         StartCoroutine(HandleThunder());
     }
 
-    private WaitForSecondsRealtime waitForSeconds = new WaitForSecondsRealtime(0.05f);
+    private WaitForSecondsRealtime waitForSecondsShort = new WaitForSecondsRealtime(0.05f);
+    private WaitForSecondsRealtime waitForSecondsLong = new WaitForSecondsRealtime(3f);
     private IEnumerator HandleThunder()
 	{
+        clipToPlay = _thunderAudioClips[UtilsManager.Instance.GetRandomIntBetween(0, _thunderAudioClips.Count - 1)];
+
 		_thunderLight.enabled = true;
-		yield return waitForSeconds;
-		yield return waitForSeconds;
+		yield return waitForSecondsShort;
+		yield return waitForSecondsShort;
+		yield return waitForSecondsShort;
 		_thunderLight.enabled = false;
-		yield return waitForSeconds;
+		yield return waitForSecondsShort;
 		_thunderLight.enabled = true;
-		yield return waitForSeconds;
+		yield return waitForSecondsShort;
 		_thunderLight.enabled = false;
-		yield return waitForSeconds;
+		yield return waitForSecondsShort;
 		_thunderLight.enabled = true;
-		yield return waitForSeconds;
+		yield return waitForSecondsShort;
 		_thunderLight.enabled = false;
-        yield return waitForSeconds;
+
+        yield return waitForSecondsLong;
+
+		_thunderAudioSource.PlayOneShot(clipToPlay);
 
 		playingThunder = false;
     }
